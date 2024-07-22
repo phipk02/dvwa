@@ -7,9 +7,9 @@ dvwaPageStartup( array( 'authenticated' ) );
 
 $page = dvwaPageNewGrab();
 $page[ 'title' ]   = 'Vulnerability: Brute Force' . $page[ 'title_separator' ].$page[ 'title' ];
-$page[ 'page_id' ] = 'brute';
-$page[ 'help_button' ]   = 'brute';
-$page[ 'source_button' ] = 'brute';
+$page[ 'page_id' ] = 'web_login';
+$page[ 'help_button' ]   = 'web_login';
+$page[ 'source_button' ] = 'web_login';
 dvwaDatabaseConnect();
 
 $method            = 'GET';
@@ -30,7 +30,7 @@ switch( dvwaSecurityLevelGet() ) {
 		break;
 }
 
-require_once DVWA_WEB_PAGE_TO_ROOT . "vulnerabilities/brute/source/{$vulnerabilityFile}";
+require_once DVWA_WEB_PAGE_TO_ROOT . "vulnerabilities/web_login/source/{$vulnerabilityFile}";
 
 $page[ 'body' ] .= "
 <div class=\"body_padded\">

@@ -34,7 +34,7 @@ if (array_key_exists ("id", $_GET)) {
 		case "fi" :
 			$vuln = 'File Inclusion';
 			break;
-		case "brute" :
+		case "web_login" :
 			$vuln = 'Brute Force';
 			break;
 		case "csrf" :
